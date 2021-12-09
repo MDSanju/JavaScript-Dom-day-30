@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <article class="blog">
+                <h2>Blog number-01</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article id="second-blog" class="blog">
+                <h2>Blog number-02</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article class="blog">
+                <h2>Blog number-03</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article class="blog">
+                <h2>Blog number-04</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        const stylesofClasses = document.querySelectorAll('.blog');
+        for (const blog of stylesofClasses) {
+            blog.style.textAlign = 'center';
+            blog.style.margin = '50px';
+        }
+
+        const stylesOfId = document.querySelector('#second-blog p');
+        stylesOfId.style.color = 'orangeRed';
+        stylesOfId.style.fontSize = '24px';
+        stylesOfId.style.fontWeight = '900';
+    </script>
+</body>
+
+</html>

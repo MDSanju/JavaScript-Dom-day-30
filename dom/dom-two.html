@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 25px;
+        }
+        
+        h2 {
+            color: white;
+        }
+        
+        p {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Dynamic Website!</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Blog number-01</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article>
+                <h2>Blog number-02</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article>
+                <h2>Blog number-03</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article>
+                <h2>Blog number-04</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        // export get getElementsByTagName
+        const blogTitles = document.getElementsByTagName('h2');
+        for (const h2 of blogTitles) {
+            console.log(h2.innerText);
+        }
+
+        const blogDetails = document.getElementsByTagName('p');
+        for (const p of blogDetails) {
+            console.log(p.innerText);
+        }
+    </script>
+</body>
+
+</html>

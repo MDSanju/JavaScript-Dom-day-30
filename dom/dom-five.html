@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <article class="blog">
+                <h2>Blog number-01</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article id="second-blog" class="blog">
+                <h2>Blog number-02</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article id="third-blog" class="blog">
+                <h2>Blog number-03</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article class="blog">
+                <h2>Blog number-04</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        // getAttribute for getting attribute name, style and other details as well
+        const secondBlog = document.getElementById('second-blog');
+        secondBlog.getAttribute('id');
+        secondBlog.getAttribute('style');
+
+        // setAttribute for setting a new attribute and its value as well
+        secondBlog.setAttribute('title', 'I added a tooltip using JS!');
+
+        // this is how to get parentNode of it
+        secondBlog.parentNode
+            // parentNode again and again for another parent Node one by one
+        secondBlog.parentNode.parentNode.parentNode
+
+        // that is how to get child nodes and child nodes one by one
+        const thirdBlog = document.getElementById('third-blog');
+        thirdBlog.childNodes.childNodes.childNodes
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+body {
+    background-color: #121212;
+}
+
+.hello-js {
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(255, 251, 251);
+}

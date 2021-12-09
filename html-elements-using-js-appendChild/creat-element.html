@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="dynamic-header">My Dynamic Website!</h1>
+        <section>
+            <h2>Blogs list</h2>
+            <ul id="blog-list">
+                <li>Blog-1</li>
+                <li>Blog-2</li>
+                <li>Blog-3</li>
+                <li>Blog-4</li>
+            </ul>
+        </section>
+    </header>
+    <main>
+        <section id="blogs-parent">
+            <article class="blog">
+                <h2>Blog number-01</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article class="blog">
+                <h2 id="second-title">Blog number-02</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article class="blog">
+                <h2>Blog number-03</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+            <article class="blog">
+                <h2>Blog number-04</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae?</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        // creat and add element by using js
+
+        // creat the element
+        const li = document.createElement('li');
+        li.innerText = 'JS-Blog';
+
+        // where to add
+        const ul = document.getElementById('blog-list');
+
+        // append or add a new element
+        ul.appendChild(li);
+
+
+        // add new article
+        const article = document.createElement('article');
+
+        // class add system for getting styles
+        article.classList.add('blog');
+
+        // const h2 = document.createElement('h2');
+        // h2.innerText = 'JavaScript JS-Blog-5';
+        // const p = document.createElement('p');
+        // p.innerText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae!!!';
+        // article.appendChild(h2);
+        // article.appendChild(p);
+
+
+
+        // short cut way to add a new article
+        article.innerHTML = `
+        <h2>JavaScript JS-Blog-5</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi porro atque praesentium ea, consectetur excepturi quisquam quasi deleniti officia aliquam consequuntur eum voluptatem magnam perspiciatis, quis culpa recusandae!!!</p>
+        `
+
+
+        // parent of article
+        const blogSection = document.getElementById('blogs-parent');
+        blogSection.appendChild(article);
+
+
+
+        // remove child tags or elements
+        // const list = document.getElementById('blog-list');
+        // list.removeChild(list.children[1]);
+
+        // another way to remove child
+        const list = document.getElementById('blog-list');
+        const removeSecondChild = list.children[1];
+        list.removeChild(removeSecondChild);
+
+
+        // styles add
+        const secondBlogTitle = document.getElementById('second-title');
+        secondBlogTitle.style.textAlign = 'center';
+        secondBlogTitle.style.color = 'orangeRed';
+
+        const headerHead = document.getElementById('dynamic-header');
+        headerHead.style.color = 'white';
+        headerHead.style.textAlign = 'center';
+        headerHead.innerText = 'TITLE UPDATED BY JavaScript!';
+        headerHead.style.backgroundColor = 'orangeRed';
+        headerHead.style.margin = '60px';
+        headerHead.style.paddingTop = '7px';
+        headerHead.style.paddingBottom = '7px';
+
+        const blogs = document.getElementsByClassName('blog')
+        for (const blog of blogs) {
+            blog.style.margin = '100px';
+            blog.style.textAlign = 'center';
+        }
+    </script>
+</body>
+
+</html>
